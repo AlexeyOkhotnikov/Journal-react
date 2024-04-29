@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import './Button.css';
 
 const Button = () => {
+	const [text, setText] = useState('Save');
+
+	const clicked = () => {
+		setText('Close');
+	};
+
 	return (
 		<>
-			<button className='button accent'>Save</button>
+			<button onClick={clicked} className='button accent'>
+				{text}
+			</button>
 		</>
 	);
 };
