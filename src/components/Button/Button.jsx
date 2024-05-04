@@ -4,13 +4,13 @@ import './Button.css';
 const Button = () => {
 	const [text, setText] = useState('Save');
 
-	const clicked = () => {
+	const clickedClose = () => {
 		setText('Close');
 	};
 
 	return (
 		<>
-			<button onClick={clicked} className='button accent'>
+			<button onClick={clickedClose} className='button accent'>
 				{text}
 			</button>
 		</>
